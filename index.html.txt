@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generación FE - Sitio Oficial</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <meta name="description" content="Iglesia Generación FE - Fuego y Espíritu" />
+
+  <style>
+    :root {
+      --bg: #071116;
+      --accent-cream: #dcddd0;
+      --accent-blue-1: #508fff;
+      --accent-blue-2: #325feb;
+      --white: #ffffff;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      --max-w: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg) 0%, #061014 100%);
+      color: var(--accent-cream);
+      font-family: 'Poppins', 'Montserrat', sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: var(--accent-blue-1); text-decoration: none; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(6px);
+      background: rgba(7,17,22,0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 12px;
+    }
+
+    .brand div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand strong {
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+    }
+
+    nav a:hover {
+      color: var(--accent-blue-2);
+    }
+
+    .cta {
+      background: linear-gradient(90deg,var(--accent-blue-2),var(--accent-blue-1));
+      color: var(--white);
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      align-items: center;
+      gap: 24px;
+      padding: 70px 0;
+    }
+
+    .hero-card {
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 28px;
+      border-radius: 16px;
+    }
+
+    h1 {
+      color: var(--white);
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    p.lead {
+      color: var(--accent-cream);
+      opacity: 0.9;
+      margin-bottom: 18px;
+    }
+
+    .quick-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    /* Secciones */
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      height: 3px;
+      width: 60px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--accent-blue-2), var(--accent-blue-1));
+    }
+
+    .muted {
+      opacity: 0.9;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .map {
+      height: 250px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(50,95,235,0.06), rgba(80,143,255,0.03));
+      display: grid;
+      place-items: center;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .two-col {
+        grid-template-columns: 1fr;
+      }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="Zona2 (4).png" alt="Logo Generación FE" />
+        <div>
+          <strong>Generación FE</strong>
+          <span style="font-size: 13px;">Fuego y Espíritu · Domingos 17:00</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="#contacto" class="cta">Unirse / Donar</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="inicio" class="hero">
+      <div class="hero-card">
+        <h1>Bienvenidos a Generación FE</h1>
+        <p class="lead">Un lugar donde el fuego y el Espíritu de Dios transforman vidas. Somos una familia que busca crecer en fe, servicio y amor.</p>
+        <div class="quick-actions">
+          <a href="#eventos" class="cta">Ver próximos eventos</a>
+          <a href="#about" class="cta" style="background:transparent;border:1px solid var(--accent-blue-1)">Conócenos</a>
+        </div>
+
+        <div class="cards">
+          <div class="card"><h4>Reuniones</h4><p class="muted">Domingos 17:00 · Células semanales</p></div>
+          <div class="card"><h4>Evangelismo</h4><p class="muted">Actividades y salidas misioneras</p></div>
+          <div class="card"><h4>Streaming</h4><p class="muted">En vivo por nuestro canal de YouTube</p></div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="color: var(--white);">Próximo Evento</h3>
+          <p class="muted">Encuentro \"Encendidos\"<br>📅 Sábado DD/MM - 🕔 17:00 hs</p>
+          <a href="#contacto" class="cta" style="margin-top:10px; display:inline-block;">Inscribirme</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <div class="divider"></div>
+        <h2 style="color: var(--white);">Sobre Nosotros</h2>
+      </div>
+      <div class="two-col">
+        <div>
+          <p class="muted">Somos una iglesia apasionada por Jesús, comprometida en levantar una generación encendida por el fuego del Espíritu Santo. Nuestra visión es alcanzar, formar y enviar discípulos que transformen su entorno.</p>
+          <h3 style="color: var(--white); margin-top:20px;">Ministerios</h3>
+          <p class="muted">Jóvenes · Niños · Música · Evangelismo · Formación</p>
+          <h3 style="color: var(--white); margin-top:20px;">Horarios</h3>
+          <p class="muted">Domingos 17:00 - Reunión General<br>Miércoles 19:00 - Células</p>
+        </div>
+        <div class="map">
+          <p class="muted"><strong>📍 Dirección:</strong><br>Corro 2224 y Santos Dumont, Ituzaingó</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos">
+      <div class="section-title">
+        <div class="divider"></div>
+        <h2 style="color: var(--white);">Eventos</h2>
+      </div>
+      <div class="card">
+        <h4 style="color: var(--white);">Retiro “Encuentro que Transforma”</h4>
+        <p class="muted">Un fin de semana de transformación y renovación espiritual. ✨</p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="section-title">
+        <div class="divider"></div>
+        <h2 style="color: var(--white);">Contacto</h2>
+      </div>
+      <p class="muted">📞 +54 9 11 XXX XXXX · ✉️ contacto@generacionfe.com</p>
+      <form style="margin-top:20px; display:grid; gap:10px; max-width:480px;">
+        <input type="text" placeholder="Nombre" style="padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.1); background:transparent; color:var(--white);">
+        <input type="email" placeholder="Email" style="padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.1); background:transparent; color:var(--white);">
+        <textarea rows="4" placeholder="Mensaje" style="padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.1); background:transparent; color:var(--white);"></textarea>
+        <button type="submit" class="cta" style="border:none; cursor:pointer;">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div>
+      <strong style="color: var(--white);">Generación FE</strong><br>
+      <span class="muted">Corro 2224 · Ituzaingó</span>
+    </div>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^=\"#\"]').forEach(a => a.addEventListener('click', function(e){
+      e.preventDefault();
+      const id = this.getAttribute('href').substring(1);
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({ behavior: 'smooth' });
+    }));
+  </script>
+</body>
+</html>
